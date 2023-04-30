@@ -2,22 +2,21 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-
 body {
-    margin: 0%;
+    margin: 0%; 
 }
 
 .header {
     width: 100%;
-    background-color: rgb(12, 209, 45);
+    background-color: rgb(51, 145, 67);
     border-bottom: solid rgb(0, 0, 0) 3px;
 }
 
 .login_btn{
-    border: 2px solid rgb(12, 209, 45);
+    border: 2px solid rgb(51, 145, 67);
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(12, 209, 45);
+    background-color: rgb(51, 145, 67);
     color: rgb(0, 0, 0);
 }
 
@@ -50,6 +49,7 @@ body {
     color: #000000;
     list-style: none;
     justify-content: space-evenly;
+    font-weight: bold;
 
 }
 
@@ -60,7 +60,7 @@ a {
 
 .banner {
     background-size: cover;
-    background-image: url(../site/IMG/aevar6lpheu71.gif);
+    background-image: url(../IMG/aevar6lpheu71.gif);
     width: 100%;
     height: 500px;
     opacity: 95%;
@@ -82,18 +82,19 @@ a {
 }
 p span{
     font-weight: 800;
-    color: rgb(0, 172, 29);
+    color: rgb(51, 145, 67);
 }
 
 .card {
-    background-color: rgb(251, 251, 251);
+    background-color: rgba(251, 251, 251, 0.749);
     width: 600px;
     height: auto;
     margin-left: -10px;
     margin-top: -10px;
-    border-radius: 500px;
     text-align: center;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.197);
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #sessao1{
@@ -104,3 +105,53 @@ p span{
     background: #ffffff;
     min-height: 150vh;
 }
+
+/* <!-- Estilização Home --> */
+
+#main_home{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+#aside_home{
+    width: 650px;
+    margin-left: 20px;
+}
+
+.h2_home{
+    font-size: 56px;
+    line-height: 20px;
+    font-weight: bold;
+    width: 630px;
+    margin-top: -20px;
+}
+
+span{
+    color: rgb(51, 145, 67);
+}
+
+p{
+    line-height: 20px;
+    max-width: 650px;
+    font-size: 17px;
+    margin-left: 30px;
+    text-align: start;
+    font-weight: bold;
+    
+}
+
+#img_capamine  {
+    width: 450px;
+    height: 450px; 
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+#aside_home a{
+    text-decoration: none;
+    color: rgb(51, 145, 67);
+}
+
+/* <!-- Fim Estilização Home --> */
+
