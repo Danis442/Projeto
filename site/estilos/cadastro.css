@@ -1,0 +1,118 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-3');
+                
+
+* {
+    font-family: 'Minecraft', sans-serif;
+}
+
+body {
+    margin: 0px;
+    max-width: 1000px;
+    margin-left: 40px;
+     overflow-x: hidden;
+    background-image: url(../IMG/minecraft\ texturas\ classicas\ -\ 18.jpg);
+}
+
+.main-cadastro-user{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-cadastro-user{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.left-cadastro-user > h1 {
+    font-size: 3vw;
+    color:rgb(51, 145, 67);;
+}
+
+.left-cadastro-user-image{
+    margin-top: 30px;
+    width: 25vw;
+}
+
+.right-cadastro-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 560px;
+    height: 560px;
+    margin-top: 120px;
+
+}
+
+
+.card-cadastro-user{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 25px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+
+.card-cadastro-user > h1 {
+    color: rgb(51, 145, 67);
+    font-weight: 700;
+    margin: 0;
+}
+
+.text-field{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.text-field > input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    background: #F9F9F9;
+    color: black;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.text-field > label{
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+.botao-cadastro-user{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: rgb(51, 145, 67);
+    color: #000000;
+    letter-spacing: 3px;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00000056;
+}
