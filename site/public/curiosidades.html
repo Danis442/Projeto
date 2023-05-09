@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/curiosidade.css">
+  <link rel="icon" href="./assets/imgs/download.png">
+  <title>Curiosidades | Projeto indiviudal</title>
+</head>
+
+<body>
+
+  <div class="card">
+    <br>
+    <h1>Curiosidades do Minecraft</h1>
+
+    <h4>No Minecraft você tem 10 corações, que representam sua vida no jogo, veja quanto de dano você recebe por cada
+      arma.</h4>
+    <img src="./assets/imgs/status_bar_survival-removebg-preview.png" alt="" id="imagem_coracao">
+
+    <h2>Qual arma você quer escolher?</h2>
+
+
+
+    <select name="select" id="select_armas">
+      <option value="escolher">Escolha uma alternativa</option>
+      <option value="espada">Espada de Netherite</option>
+      <option value="arco">Arco e Flecha</option>
+      <option value="mao">Sem nada na mão</option>
+    </select> <br><br>
+    <button onclick="dano(); audio()">Dano que irá receber</button> <br>
+    <div id="resultado"></div>
+  </div>
+</body>
+
+</html>
+
+
+<script>
+  function dano() {
+
+    var armas = select_armas.value
+
+    if (armas == "escolher") {
+      alert("Escolha uma arma...")
+    }
+
+    else if (armas == "espada") {
+      resultado.innerHTML = "<br> Você irá receber 6 de dano, ou seja, irá perder 6 corações."
+    }
+    else if (armas == "arco") {
+      resultado.innerHTML = "<br> Você irá receber 3.5 de dano, ou seja irá perder 3.5 corações"
+    }
+    else {
+      resultado.innerHTML = "<br> Você ira receber 0.5 de dano, ou seja, irá perder 0.5 coração"
+    }
+
+
+  }
+function audio(){
+        var som = new Audio('assets/sons/Minecraft.mp3')
+        som.play()
+}
+
+
+</script>

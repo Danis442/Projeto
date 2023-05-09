@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="icon" href="./assets/imgs/download.png">
+
+    <title>Cadastro | Projeto Individual</title>
+</head>
+
+<body>
+    <div class="main-cadastro-user">
+        <div class="left-cadastro-user">
+            <h1>Registre-se <br>E faça parte dessa comunidade incrível!</h1>
+            <img src="./assets/imgs/Capa_do_Jogo.png" class="left-cadastro-user-image" alt="">
+        </div>
+        <div class="right-cadastro-user">
+            <div class="card-cadastro-user">
+                <!-- <h1>CADASTRO DO USUÁRIO</h1> <br>    -->
+                <div class="text-field">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="input_nome" placeholder="Nome">
+                    <div id="erro_nome"></div>
+                </div>
+
+                <div class="text-field">
+                    <label for="email">Email</label>
+                    <input type="text" id="input_email" placeholder="Email">
+                    <div id="erro_email"></div>
+                </div>
+                <div class="text-field">
+                    <label for="senha">Criar Senha</label>
+                    <input type="password" id="input_senha" placeholder="********">
+                    <div id="erro_senha"></div>
+                </div>
+                <div class="text-field">
+                    <label for="confirmar-senha">Confirmar Senha</label>
+                    <input type="password" id="input_confirmar_senha" placeholder="********">
+                    <div id="erro_confirmar_senha"></div>
+                </div>
+                <button onclick="cadastro()" class="botao-cadastro-user">Registrar Usuário</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function cadastro() {
+
+        var nome = input_nome.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confsenha = input_confirmar_senha.value;
+
+        erro_email.innerHTML = "";
+        erro_senha.innerHTML = "";
+        erro_confirmar_senha.innerHTML = "";
+
+        if (nome == "" || email == "" || senha == "" || confsenha == "") {
+            alert("Preencha os campos vazios");
+        }
+        else {
+
+            if (email.indexOf("@") == -1 || email.endsWith(".com") == false) {
+
+                erro_email.innerHTML = "email inválido"
+                input_email.className = "invalido"
+
+                if (email.indexOf("@") == -1) {
+
+                    erro_email.innerHTML = `Está faltando o @`
+
+                }
+                else if (email.endsWith(".com") == false) {
+
+                    erro_email.innerHTML = `Está faltando o ".com"`
+
+                }
+
+            }
+
+            else if (!/[!@#\$%\^&\*\(\)\-_\+=\[\]{};':"\\|,.<>\/?]/.test(senha)) { /* O sinal de exclamação ! no início inverte o resultado da verificação*/
+                erro_senha.innerHTML = 'Senha inválida!'
+                erro_senha.innerHTML += ' A senha deve conter pelo menos um caractere especial.'
+                input_senha.className = "invalido"
+            }
+
+            else if (senha.length < 8) {
+                erro_senha.innerHTML = 'Senha inválida!'
+                erro_senha.innerHTML += ' Precisa ter ao menos 8 dígitos'
+                input_senha.className = 'invalido'
+            }
+
+            else if
+                (confsenha != senha) {
+                erro_confirmar_senha.innerHTML = `A senha de confirmação não corresponde à senha inserida. Por favor, tente novamente`
+                input_confirmar_senha.className = "invalido"
+            }
+
+
+            else { // mudar o alert para uma div na página 
+                //  mudar.innerHTML = "Cadastro concluído! <br>Direcionando para a página de login"
+                //         alert ("Cadastro Concluído com sucesso!")
+                //          window.location = "login.html";
+                //         }
+                //         // window.location serve para direcionar o usuário para a página de login
+
+                // }
+
+
+                fetch("/usuarios/cadastrar", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        // crie um atributo que recebe o valor recuperado aqui
+                        // Agora vá para o arquivo routes/usuario.js
+                        nomeServer: nome,
+                        emailServer: email,
+                        senhaServer: senha
+                    })
+                }).then(function (resposta) {
+
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+
+                        alert("Cadastro Concluído com sucesso!")
+                        window.location = "login.html";
+
+                        limparFormulario();
+                        finalizarAguardar();
+                    } else {
+                        throw ("Houve um erro ao tentar realizar o cadastro!");
+                    }
+                }).catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                    finalizarAguardar();
+                });
+
+                return false;
+            }
+
+            function sumirMensagem() {
+                cardErro.style.display = "none"
+            }
+        }
+
+    }
+
+</script>
