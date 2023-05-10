@@ -1,0 +1,175 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-3');
+                
+
+* {
+    font-family: 'Minecraft', sans-serif;
+}
+  
+  .header-left a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 3px solid;
+    background-image: url(../assets/imgs/minecraft\ texturas\ classicas\ -\ 22.jpg);
+  }
+
+  #imagem_mine{
+    border-bottom: solid black;
+    border-top: solid black;
+    border-left: solid black;
+    border-right: solid black;
+  }
+  
+  .header-left h1 {
+    color: rgb(255, 255, 255);
+  }
+  
+  .header-left img {
+    margin-top: -50px;
+  }
+  
+  .hello {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hello h3 {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  
+  .hello h3 span {
+    font-weight: 800;
+  }
+  
+  .btn-nav {
+    width: 50%;
+    height: 30px;
+    color: white;
+    background-color: rgb(51, 145, 67);
+     border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+  }
+  
+  .btn-nav-white {
+    width: 50%;
+    height: 30px;
+    background-color: rgb(51, 145, 67);;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+  }
+  
+  .btn-nav-white h3 {
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .btn-nav h3 {
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .btn-logout h3 {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  
+  .btn-logout {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    color: rgb(51, 145, 67);
+    background-color: rgb(51, 145, 67);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .dash-right {
+    display: flex;
+    width: 80%;
+    height: fit-content;
+    background-color: #ffffff;
+    position: relative;
+    top: 0;
+    left: 25%;
+  }
+  
+  h2 {
+    margin-left: 18%;
+    text-align: center;
+    border-bottom: solid black;
+    border-top: solid black;
+    background-color: rgb(51, 145, 67);
+    padding-top: 20px;
+    margin-top: -10px;
+    padding-bottom: 20px;
+    
+  }
+
+.historia_vida {
+    margin-left: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.videos{
+    margin-left: 300px;
+    margin-top: 20px;
+    border-bottom: solid 5px rgb(51, 145, 67);
+    border-top: solid 5px rgb(51, 145, 67);
+    border-left: solid 5px rgb(51, 145, 67);
+    border-right: solid 5px rgb(51, 145, 67);
+}
+
+
+#venom{
+    margin-left: 300px;
+}
+
+#rezende{
+    margin-left: 300px;
+    margin-top: 60px;
+}
+
+#authentic{
+    margin-left: 300px;
+    margin-top: 60px;
+}
+
+
+#tazercraft{
+    margin-left: 300px;
+    margin-top: 60px;
+}
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mim | Projeto Individual</title>
+
+    <link rel="stylesheet" href="./css/homeSite.css">
+    <script src="../js/funcoes.js"></script>
+    <link rel="icon" href="./assets/imgs/download.png">
+
+    <!-- scripts do Chart.js - 2022-1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload=" atualizarFeed()">
+
+    <div class="header-left">
+        <h1>Minecraft</h1>
+        <br><br>
+
+        <img src="./assets/imgs/download.png" width="150px" height="150px" id="imagem_mine">
+
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        </div>
+
+        <div class="btn-nav-white">
+            <a href="./HomeSite.html ">
+                <h3>Sobre mim</h3>
+            </a>
+        </div>
+
+        <div class="btn-nav">
+            <a href="./graficos.html">
+                <h3>Gráficos</h3>
+            </a>
+
+        </div>
+
+        <div class="btn-logout">
+            <a href="./index.html">
+                <h3>Sair</h3>
+            </a>
+        </div>
+
+    </div>
+
+
+    <h2>Sobre mim</h2>
+    <br>
+    <div class="historia_vida">
+        Quando eu tinha meus 10 anos eu gostava de assistir muitos canais de Minecraft, foi quando eu decidi que iria
+        baixar o jogo e me aventurar nesse jogo. INTRODUÇÃO <br><br><br> DESENVOLVIMENTO <br><br><br><br> FINALIZAÇÃO
+        <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat neque consectetur aspernatur
+        ad. Architecto similique quidem veniam, ratione adipisci quos nisi amet possimus porro! Explicabo nisi eveniet
+        tempora aut Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque reiciendis veniam, dolorum
+        voluptates sit quos. Aliquam excepturi autem ad perspiciatis iure, necessitatibus nemo debitis corrupti
+        distinctio exercitationem quo quisquam vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+        laudantium voluptas corrupti, porro doloribus perferendis eligendi tempore minus voluptatum fugiat, officia
+        facere odio neque natus adipisci, eos rem nihil explicabo? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Deleniti debitis aut rerum, modi eveniet esse voluptatum, ad fugiat nam voluptate, cumque officia? Minima
+        assumenda ipsum temporibus quis eius eligendi maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Iusto praesentium culpa corrupti vero adipisci, ipsa ut eos vel provident animi perspiciatis enim quisquam
+        voluptatibus ad obcaecati quas repellat dolore mollitia?
+        Laudantium, inventore? Libero alias voluptatem quos inventore! Accusamus similique, ex et illo tempore, ducimus
+        ab adipisci dignissimos id fugit repellendus quisquam qui molestias. Rem blanditiis cumque obcaecati natus
+        reiciendis iusto.
+        Totam, voluptas officia? Veniam nobis dicta officiis, sit dolores, saepe hic enim, sequi perferendis explicabo
+        quam similique. Labore exercitationem eos ratione perspiciatis, voluptate enim sapiente asperiores suscipit vero
+        nobis sequi.
+        Voluptatum nostrum animi minus itaque adipisci fugit rerum impedit ducimus quod magnam, repellendus ipsa
+        aspernatur asperiores praesentium aliquid quibusdam ea expedita sit possimus autem tempora fuga perspiciatis
+        nobis aut. Suscipit!
+        Dolore, commodi explicabo. Veniam voluptatem eveniet fugiat voluptate! Nam id reprehenderit rem sequi vitae
+        ipsam explicabo molestiae aut. Dolorum aliquam molestias accusamus praesentium voluptatibus culpa ullam, velit
+        nisi recusandae veniam.
+        Quidem atque, voluptate natus, ea nihil ab neque sunt veritatis odio iusto pariatur nemo consequatur velit.
+        Corrupti magnam laboriosam quis maxime. Quaerat velit saepe sint assumenda quo quod ratione impedit!
+        Error asperiores beatae rerum minima adipisci ratione ipsam explicabo maiores iure aspernatur consequuntur
+        similique nemo a quos iusto, dolorum porro? Quasi fugiat, mollitia nulla enim itaque modi veritatis saepe aut!
+        Numquam, tempore, odio recusandae sed doloribus dolore incidunt, voluptatum iste commodi facilis excepturi
+        veniam? Adipisci eius dignissimos nobis at. Labore incidunt veritatis, neque velit fugit voluptatibus voluptate
+        cum eligendi mollitia.
+        Quos nulla eius nam consequatur quidem expedita vitae veniam omnis aliquam. Consequatur, excepturi. Vel quis
+        esse quidem minima iusto iure natus, ut, quaerat est nobis ducimus facilis mollitia harum. Architecto.
+        Ut modi nesciunt deserunt, sint velit labore quis architecto deleniti. Iure laudantium modi optio corporis cum
+        ducimus corrupti ut veniam debitis, voluptate voluptatum odio! Pariatur neque officiis corporis consequuntur
+        repellat? <br><br><br><br><br>
+
+    </div>
+    <h2>Canais de minecraft que eu assistia</h2>
+
+    <h3 id="venom">- Venom Extreme</h3>
+    <div id="videos_mine">
+        
+            <iframe class="videos" id="video_venom" width="480" height="380"
+                src="https://www.youtube.com/embed/L82w5WRx6vw" title="Herobrine: Mito ou Realidade??? =P"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>   
+
+
+        <h3 id="rezende">- RezendeEvil</h3>
+
+            <iframe class="videos" id="video_rezende" width="480" height="380"
+                src="https://www.youtube.com/embed/8Ror8pnd6HE" title="Minecraft - PARAÍSO - #1 O QUE ACONTECEU?"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        <h3 id="authentic">- AuthenticGames</h3>
+
+            <iframe class="videos" id="video_authentic" width="480" height="380"
+                src="https://www.youtube.com/embed/MK7UpP40hbg"
+                title="Minecraft - OS NOVOS MONSTROS DA ESCOLA !! - Escola Monstro #01 | Monster School" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+        <h3 id="tazercraft">- TazerCraft</h3>
+
+            <iframe class="videos" id="video_tazer" width="480" height="380"
+                src="https://www.youtube.com/embed/q9TuttD6oPk"
+                title="Minecraft: CHUME LABS - MELHOR FÁBRICA DO MUNDO! #1" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+
+    </div>
