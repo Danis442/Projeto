@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/vetor.css">
+    <link rel="icon" href="./assets/imgs/download.png">
+    <title>Curiosidades | Projeto indiviudal</title>
+</head>
+
+<body>
+
+    <div class="card">
+        <br>
+        <h1>Curiosidades do Minecraft</h1>
+
+        <h4>No Minecraft você consegue criar algumas poções com diversos tipos de efeitos, alguns ruin e outros bons.
+            Descubra qual poção você irá fazer! </h4>
+        <img src="./assets/imgs/como-fazer-po-o-de-invisibilidade-no-minecraft-removebg-preview.png" alt=""
+            id="imagem_poçao">
+
+        <h2>Que poção você irá criar?</h2>
+
+
+        <div class="selects">
+            <select name="select" id="select_poçao1">
+                <option value="escolher">Escolha uma alternativa</option>
+                <option value="pote">Pote sem Efeito</option>
+            </select> <br><br>
+
+            <select name="select" id="select_poçao2">
+                <option value="escolher">Escolha uma alternativa</option>
+                <option value="cenoura_dourada">Cenoura Dourada</option>
+                <option value="olho">Olho de Aranha Fermentado</option>
+                <option value="fungo">Olho de Aranha Fermentado</option>
+            </select> <br><br>
+
+            <select name="select" id="select_poçao3">
+                <option value="escolher">Escolha uma alternativa</option>
+                <option value="redstone">Redstone</option>
+                <option value="polvora">Pólvora</option>
+            </select> <br> <br>
+        </div>
+        <button onclick="poçao()">Poção que irá criar</button> <br>
+        <div id="resultado"></div>
+    </div>
+
+    <div id="pag1_ferramentas">
+        <button onclick="voltar_pagina()" id="voltar_pag1">Voltar</button>
+    </div>
+
+    <div id="voltar_home">
+        <button onclick="pag_princip()" id="pagina_princip">Voltar a Home</button>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    
+
+    
+
+
+
+
+
+
+
+
+
+    function voltar_pagina() {
+        window.location = "./pagina1.html"
+    }
+
+    function pag_princip() {
+        window.location = "./index.html"
+    }
+</script>

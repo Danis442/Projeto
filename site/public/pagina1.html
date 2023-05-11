@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/pagina1.css">
+    <link rel="icon" href="./assets/imgs/download.png">
+    <title>Curiosidades | Projeto indiviudal</title>
+</head>
+
+<body>
+
+    <div class="card">
+        <br>
+        <h1>Curiosidades do Minecraft</h1>
+
+        <h4>No Minecraft você consegue quebrar blocos para conseguir recursos, veja quantos blocos você consegue quebrar
+            até sua ferramenta ser destruída.
+        </h4>
+        <br>
+        <!-- <img src="./assets/imgs/status_bar_survival-removebg-preview.png" alt="" id="imagem_coracao"> -->
+
+        <h2>Qual ferramenta você quer escolher?</h2>
+
+
+
+        <select name="select" id="select_ferramentas">
+            <option value="escolher">Escolha uma alternativa</option>
+            <option value="picareta">Picareta de Pedra</option>
+            <option value="pa">Pá de Madeira</option>
+            <option value="machado">Machado de ferro</option>
+            <option value="enxada">Enxada de Ouro</option>
+        </select> <br><br>
+        <button onclick="ferramenta()">Clique para descobrir</button> <br>
+        <div id="resultado"></div>
+    </div>
+
+    <div id="pag_ferramentas">
+        <button onclick="proxima_pagina()" id="prox_pag2">Próxima Página</button>
+    </div>
+
+    <div id="pag1_ferramentas">
+        <button onclick="voltar_pagina()" id="voltar_pag1">Voltar</button>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    function ferramenta() {
+        var contador = 0
+        var ferramentas = select_ferramentas.value
+
+        resultado.innerHTML = ""
+        if (ferramentas == "escolher") {
+            alert("Escolha uma arma...")
+        }
+
+        else if (ferramentas == "picareta") {
+            while (contador <= 132) {
+                resultado.innerHTML += `<br> ${contador} `
+                contador += 1
+            }
+            resultado.innerHTML += "<br> A sua picareta quebrou depois de quebrar 132 blocos"
+        }
+        else if (ferramentas == "pa") {
+            while (contador <= 59) {
+                resultado.innerHTML += `<br> ${contador} `
+                contador += 1
+            }
+            resultado.innerHTML += "<br> A sua pá quebrou depois de quebrar 59 blocos"
+        }
+        else if (ferramentas == "machado") {
+            while (contador <= 250) {
+                resultado.innerHTML += `<br> ${contador} `
+                contador += 1
+            }
+            resultado.innerHTML += "<br> O seu macahdo quebrou depois de quebrar 250 blocos"
+        }
+        else {
+            while (contador <= 32) {
+                resultado.innerHTML += `<br> ${contador} `
+                contador += 1
+            }
+            resultado.innerHTML += "<br> A sua enxada quebrou depois de arar 32 blocos de terra"
+        }
+    }
+
+    function proxima_pagina() {
+        window.location = "./paginaVetor.html"
+    }
+
+    function voltar_pagina() {
+        window.location = "./curiosidades.html"
+    }
+
+</script>

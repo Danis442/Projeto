@@ -5,7 +5,6 @@
     font-family: 'Minecraft', sans-serif;
 }
 
-
 body {
   
     font-family: 'Poppins';
@@ -13,18 +12,10 @@ body {
     background-color: #152325;
     align-items: center;
     overflow-x: hidden;
-
 }
 
 h1{
     color: #0aa70a;
-}
-
-#imagem_coracao{
-    width: 300px;
-    height: 100px;
-    margin-inline: center;
-    margin-right: -160px;
 }
 
 .card {
@@ -40,10 +31,6 @@ h1{
     padding-bottom: 20px;
 }
 
-#select_armas{
-    border-radius: 20px;
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.197);
-}
   
 button{
     background-color: #10d110;
@@ -60,9 +47,26 @@ input {
     border-radius: 10px;
 }
 
-#prox_pag{
-    margin-left: 1100px;
+
+
+#prox_pag2{
+    margin-left: 900px;
+    margin-top: 50px;
 }
 
 
+#voltar_pag1{
+    margin-right: 400px;
+    
+    
+}
 
+#pag_ferramentas{
+margin-top: -50px;
+margin-left: 100px;
+}
+
+#pag1_ferramentas{
+    margin-top: -50px;
+    margin-left: 100px;
+}

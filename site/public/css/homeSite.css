@@ -154,6 +154,7 @@
 
 #venom{
     margin-left: 300px;
+    margin-top: 20px;
 }
 
 #rezende{
@@ -173,3 +174,9 @@
 }
 
 
+#videos_mine{
+  background-color:rgb(27, 119, 42);
+  margin-top: -20px;
+  width: 100%;
+  height: 100%;
+}

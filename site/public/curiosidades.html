@@ -31,8 +31,13 @@
       <option value="mao">Sem nada na mão</option>
     </select> <br><br>
     <button onclick="dano(); audio()">Dano que irá receber</button> <br>
-    <div id="resultado"></div>
-  </div>
+    <div id="resultado"></div> 
+    </div>
+
+    <div id="paginas">
+      <button onclick="proxima_pagina()" id="prox_pag">Próxima Página</button>
+    </div>
+
 </body>
 
 </html>
@@ -59,10 +64,12 @@
 
 
   }
-function audio(){
-        var som = new Audio('assets/sons/Minecraft.mp3')
-        som.play()
-}
+  function audio() {
+    var som = new Audio('assets/sons/Minecraft.mp3')
+    som.play()
+  }
 
-
+  function proxima_pagina() {
+    window.location = "./pagina1.html"
+  }
 </script>
