@@ -5,27 +5,15 @@
     font-family: 'Minecraft', sans-serif;
 }
 
-
 body {
-  
-    font-family: 'Poppins';
     background-size: 100%;
     background-color: #152325;
     align-items: center;
     overflow-x: hidden;
-
 }
 
 h1{
     color: #0aa70a;
-}
-
-#imagem_poçao{
-    margin-inline: center;
-    margin-top: -50px;
-    width: 500px;
-    height: 200px;
-    
 }
 
 .card {
@@ -33,21 +21,17 @@ h1{
     width: 600px;
     height: auto;
     margin-left: 350px;
-    margin-top: 10px;
+    margin-top: 50px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.197);
+    padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-.dicas{
-    text-align: center;
-   
-}
-
-
+  
 button{
     background-color: #10d110;
     width: 200px;
@@ -63,18 +47,41 @@ input {
     border-radius: 10px;
 }
 
-#voltar_home{
-    margin-left: 1100px;
-    margin-top: -50px;
+
+
+#prox_pag2{
+    margin-left: 950px;
+    margin-top: 50px;
+}
+
+
+#voltar_pag1{
+    margin-right: 400px;
+    
+    
+}
+
+#pag_ferramentas{
+margin-top: -50px;
+margin-left: 100px;
 }
 
 #pag1_ferramentas{
-margin-top: -40px;;
-margin-left: 40px;
-}
-
-h2{
-margin-top: -20px;
+    margin-top: -50px;
+    margin-left: 100px;
 }
 
 
+#select_xp {
+    width: 200px;
+    overflow: hidden;  
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-select.gif) no-repeat rgb(51, 145, 67);
+    background-position: 205px center;
+    width: 270px;
+    height: 48px;
+    font-size: 17px;
+    padding: 14px 21px 14px 13px;
+    color: #fff;
+    text-indent: 0.01px;
+    text-overflow: "";
+}

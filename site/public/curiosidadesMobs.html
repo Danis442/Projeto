@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/Mobs.css">
+    <link rel="icon" href="./assets/imgs/download.png">
+    <title>Curiosidades | Projeto indiviudal</title>
+</head>
+
+<body>
+
+    <div class="card">
+        <br>
+        <h1>Calculadora de EXP</h1>
+
+        <h4>No Minecraft você tem níveis de experiência. Quando você mata algum Mob você ganha níveis para poder encantar suas coisas, veja quantos Mobs você terá que matar para conseguir nível 30 de EXP.
+        </h4>
+        <br>
+
+
+        Nível atual de XP (Entre 1 e 29)  <br>
+        <input type="number" min="1" max="29" id="input_nivel"><br> <br>
+        <select name="select" id="select_xp">
+            <option value="escolher">Escolha uma alternativa</option>
+            <option value="zumbi">Zumbi</option>
+            <option value="blaze">Blaze</option>
+            <option value="dragon">Ender Dragon</option>
+          </select> <br><br>    
+
+        <button onclick="calcular()">Clique para descobrir</button> <br>
+        <div id="resultado"></div>
+    </div>
+
+    <div id="pag_ferramentas">
+        <button onclick="proxima_pagina()" id="prox_pag2">Próxima Página</button>
+    </div>
+
+    <div id="pag1_ferramentas">
+        <button onclick="voltar_pagina()" id="voltar_pag1">Voltar</button>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+    function calcular(){    
+
+        var mobs = input_nivel.value
+        var select = select_xp.value
+
+        if (select == "escolher") {
+      alert("Escolha uma das alternativas...")
+    }
+        
+       else if(select == "zumbi"){
+            resultado.innerHTML = `Com seu nível atual de XP que é ${mobs} você tera que matar ${(mobs * 33) / mobs} zumbis para alcançar nível 30 de XP`
+        }
+
+
+
+    }
+
+    function proxima_pagina() {
+        window.location = "./paginaVetor.html"
+    }
+
+    function voltar_pagina() {
+        window.location = "./pagina1.html"
+    }
+
+</script>   

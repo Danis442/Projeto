@@ -12,6 +12,12 @@
 
 <body>
 
+    <div class="dicas">
+        <input id="input_dicas"><br> <br>
+        <button onclick="pesquisar()">Dicas de Poções que podem ser Craftadas</button>
+
+    </div>
+
     <div class="card">
         <br>
         <h1>Curiosidades do Minecraft</h1>
@@ -27,23 +33,19 @@
         <div class="selects">
             <select name="select" id="select_poçao1">
                 <option value="escolher">Escolha uma alternativa</option>
-                <option value="pote">Pote sem Efeito</option>
-            </select> <br><br>
-
-            <select name="select" id="select_poçao2">
-                <option value="escolher">Escolha uma alternativa</option>
                 <option value="cenoura_dourada">Cenoura Dourada</option>
                 <option value="olho">Olho de Aranha Fermentado</option>
                 <option value="fungo">Olho de Aranha Fermentado</option>
             </select> <br><br>
 
-            <select name="select" id="select_poçao3">
+            <select name="select" id="select_poçao2">
                 <option value="escolher">Escolha uma alternativa</option>
                 <option value="redstone">Redstone</option>
                 <option value="polvora">Pólvora</option>
             </select> <br> <br>
         </div>
-        <button onclick="poçao()">Poção que irá criar</button> <br>
+        <button onclick="poçao()">Poção que irá criar</button> <br> 
+       
         <div id="resultado"></div>
     </div>
 
@@ -61,16 +63,49 @@
 
 
 <script>
-    
 
-    
+var lista_pocao = [
+    "Visão Noturna",
+    "Estranha", 
+    "invisibilidade", 
+  ];
 
+  function pesquisar() {
+    var pesquisa = input_dicas.value;
 
+    var validacao = lista_pocao.indexOf( pesquisa ) < 0;
 
+    if (validacao) {
+        alert("A poção " + pesquisa + " não existe na lista de poções");
+    } else {
+        alert("A poção " + pesquisa + " existe na lista de poções, tente Craftar a poção!");
+    }
+}
 
+    var listaPocao = []
+    var listaModificador = []
 
+    function poçao() {
+        var ingrediente = select_poçao1.value
+        listaPocao.push(ingrediente)
 
+        var modificador = select_poçao2.value
+        listaModificador.push(modificador)
 
+        for (var contador = 0; contador < listaPocao.length; contador += 1) {
+
+            var ingrediente1 = listaPocao[contador]
+            var ingrediente2 = listaModificador[contador]
+
+            if (ingrediente1 == "cenoura_dourada" && ingrediente2 == "redstone") {
+                resultado.innerHTML = `<br> Você criou uma poção de visão noturna com mais tempo de duração`
+            }
+
+        }
+
+    }
+
+  
 
 
     function voltar_pagina() {
