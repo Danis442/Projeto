@@ -7,8 +7,6 @@
 
 
 body {
-  
-    font-family: 'Poppins';
     background-size: 100%;
     background-color: #152325;
     align-items: center;
@@ -64,5 +62,15 @@ input {
     margin-left: 1100px;
 }
 
-
-
+#select_armas{
+    width: 200px;
+    overflow: hidden;  
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-select.gif) no-repeat rgb(51, 145, 67);
+    background-position: 205px center;
+    width: 270px;
+    height: 48px;
+    font-size: 17px;
+    padding: 14px 21px 14px 13px;
+    color: #fff;
+    text-indent: 0.01px
+}

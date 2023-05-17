@@ -35,7 +35,7 @@
                 <option value="escolher">Escolha uma alternativa</option>
                 <option value="cenoura_dourada">Cenoura Dourada</option>
                 <option value="olho">Olho de Aranha Fermentado</option>
-                <option value="fungo">Olho de Aranha Fermentado</option>
+                <option value="fungo">Fungo do Nether</option>
             </select> <br><br>
 
             <select name="select" id="select_poçao2">
@@ -44,8 +44,8 @@
                 <option value="polvora">Pólvora</option>
             </select> <br> <br>
         </div>
-        <button onclick="poçao()">Poção que irá criar</button> <br> 
-       
+        <button onclick="poçao()">Poção que irá criar</button> <br>
+
         <div id="resultado"></div>
     </div>
 
@@ -64,23 +64,23 @@
 
 <script>
 
-var lista_pocao = [
-    "Visão Noturna",
-    "Estranha", 
-    "invisibilidade", 
-  ];
+    var lista_pocao = [
+        "Visão Noturna",
+        "Estranha",
+        "invisibilidade",
+    ];
 
-  function pesquisar() {
-    var pesquisa = input_dicas.value;
+    function pesquisar() {
+        var pesquisa = input_dicas.value;
 
-    var validacao = lista_pocao.indexOf( pesquisa ) < 0;
+        var validacao = lista_pocao.indexOf(pesquisa) < 0;
 
-    if (validacao) {
-        alert("A poção " + pesquisa + " não existe na lista de poções");
-    } else {
-        alert("A poção " + pesquisa + " existe na lista de poções, tente Craftar a poção!");
+        if (validacao) {
+            alert("A poção " + pesquisa + " não existe na lista de poções");
+        } else {
+            alert("A poção " + pesquisa + " existe na lista de poções, tente Craftar a poção!");
+        }
     }
-}
 
     var listaPocao = []
     var listaModificador = []
@@ -101,11 +101,26 @@ var lista_pocao = [
                 resultado.innerHTML = `<br> Você criou uma poção de visão noturna com mais tempo de duração`
             }
 
+            else if (ingrediente1 == "cenoura_dourada" && ingrediente2 == "polvora") {
+                resultado.innerHTML = `<br> Você criou uma poção de visão noturna arremesável`
+            }
+            else if (ingrediente1 == "olho" && ingrediente2 == "redstone") {
+                resultado.innerHTML = `<br> Você criou uma poção de invisibilidade com mais tempo de duração`
+            }
+            else if (ingrediente1 == "olho" && ingrediente2 == "polvora") {
+                resultado.innerHTML = `<br> Você criou uma poção de invisibilidade arremesável`
+            }
+            else if (ingrediente1 == "fungo" && ingrediente2 == "redstone") {
+                resultado.innerHTML = `<br> Você criou uma poção de estranha com mais tempo de duração`
+            }
+            else if (ingrediente1 == "fungo" && ingrediente2 == "polvora") {
+                resultado.innerHTML = `<br> Você criou uma poção de estranha arremesável`
+            }
         }
 
     }
 
-  
+
 
 
     function voltar_pagina() {
