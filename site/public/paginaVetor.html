@@ -12,9 +12,17 @@
 
 <body>
 
-    <div class="dicas">
-        <input id="input_dicas"><br> <br>
-        <button onclick="pesquisar()">Dicas de Poções que podem ser Craftadas</button>
+    <div class="divPai">
+
+        <div class="botaoPoçoes">
+            <button onclick="todas_poçoes()">Veja a lista de Poções do jogo</button>
+            <div id="div_lista"></div>
+        </div>
+
+        <div class="dicas">
+            <input id="input_dicas"><br> <br>
+            <button onclick="pesquisar()">Dicas de Poções que podem ser Craftadas</button>
+        </div>
 
     </div>
 
@@ -56,7 +64,6 @@
     <div id="voltar_home">
         <button onclick="pag_princip()" id="pagina_princip">Voltar a Home</button>
     </div>
-
 </body>
 
 </html>
@@ -82,6 +89,24 @@
         }
     }
 
+    var poçoes_lista = [
+        "Poção de Invisibilidade",
+        "Poção de Visão Noturna",
+        "Poção de Resistência ao Fogo",
+        "Poção de Agilidade",
+        "Poção de Respiração Subaquática",
+        "Poção de Cura",
+        "Poção de Força",
+        "Poção de Regeneração",
+        "Poção da Queda Lenta",
+        "Poção do Mestre Tartaruga",
+        "Poção Estranha" ]
+
+
+    function todas_poçoes() {
+        div_lista.innerHTML = `${poçoes_lista}`
+    }
+
     var listaPocao = []
     var listaModificador = []
 
@@ -98,7 +123,7 @@
             var ingrediente2 = listaModificador[contador]
 
             if (ingrediente1 == "cenoura_dourada" && ingrediente2 == "redstone") {
-                resultado.innerHTML = `<br> Você criou uma poção de visão noturna com mais tempo de duração`
+                resultado.innerHTML = `Parabens! Você criou uma poção de visão noturna com mais tempo de duração <br> `
             }
 
             else if (ingrediente1 == "cenoura_dourada" && ingrediente2 == "polvora") {
@@ -111,17 +136,15 @@
                 resultado.innerHTML = `<br> Você criou uma poção de invisibilidade arremesável`
             }
             else if (ingrediente1 == "fungo" && ingrediente2 == "redstone") {
-                resultado.innerHTML = `<br> Você criou uma poção de estranha com mais tempo de duração`
+                resultado.innerHTML = `<br><img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128019-38-orig-1-article_m-1.jpg" alt=""> <br> Parabens! Você criou uma poção estranha com mais tempo de duração`
             }
             else if (ingrediente1 == "fungo" && ingrediente2 == "polvora") {
                 resultado.innerHTML = `<br> Você criou uma poção de estranha arremesável`
             }
+            
         }
 
     }
-
-
-
 
     function voltar_pagina() {
         window.location = "./pagina1.html"
