@@ -118,3 +118,10 @@ h2 {
     text-indent: 0.01px;
     text-overflow: "";
 }
+
+#div_lista{
+    font-size: large;
+    margin-left: -200px;
+
+}
+
