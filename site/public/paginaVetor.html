@@ -72,9 +72,9 @@
 <script>
 
     var lista_pocao = [
-        "Visão Noturna",
-        "Estranha",
-        "invisibilidade",
+        "Poção de Visão Noturna",
+        "Poção Estranha",
+        "Poção de Invisibilidade",
     ];
 
     function pesquisar() {
@@ -83,9 +83,9 @@
         var validacao = lista_pocao.indexOf(pesquisa) < 0;
 
         if (validacao) {
-            alert("A poção " + pesquisa + " não existe na lista de poções");
+            alert("A " + pesquisa + " não existe na lista de poções");
         } else {
-            alert("A poção " + pesquisa + " existe na lista de poções, tente Craftar a poção!");
+            alert("A " + pesquisa + " existe na lista de poções, tente Craftar a poção!");
         }
     }
 
@@ -132,23 +132,22 @@
             var ingrediente2 = listaModificador[contador]
 
             if (ingrediente1 == "cenoura_dourada" && ingrediente2 == "redstone") {
-                resultado.innerHTML = `Parabens! Você criou uma poção de visão noturna com mais tempo de duração <br> `
+                resultado.innerHTML = `<br><img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128027-83-orig-1-article_m-1.jpg" alt=""> <br>Parabens! Você criou uma poção de visão noturna com mais tempo de duração <br> `
             }
-
             else if (ingrediente1 == "cenoura_dourada" && ingrediente2 == "polvora") {
-                resultado.innerHTML = `<br> Você criou uma poção de visão noturna arremesável`
+                resultado.innerHTML = `<br><img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128027-83-orig-1-article_m-1.jpg" alt=""> <br>Parabens! Você criou uma poção de visão noturna arremesável`
             }
             else if (ingrediente1 == "olho" && ingrediente2 == "redstone") {
-                resultado.innerHTML = `<br> Você criou uma poção de invisibilidade com mais tempo de duração`
+                resultado.innerHTML = `<br><img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128028-84-orig-1-article_m-1.jpg" alt=""> <br>Parabens! Você criou uma poção de invisibilidade com mais tempo de duração`
             }
             else if (ingrediente1 == "olho" && ingrediente2 == "polvora") {
-                resultado.innerHTML = `<br> Você criou uma poção de invisibilidade arremesável`
+                resultado.innerHTML = `<br><img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128028-84-orig-1-article_m-1.jpg" alt=""> <br>Parabens! Você criou uma poção de invisibilidade arremesável`
             }
             else if (ingrediente1 == "fungo" && ingrediente2 == "redstone") {
                 resultado.innerHTML = `<br><img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128019-38-orig-1-article_m-1.jpg" alt=""> <br> Parabens! Você criou uma poção estranha com mais tempo de duração`
             }
             else if (ingrediente1 == "fungo" && ingrediente2 == "polvora") {
-                resultado.innerHTML = `<br> Você criou uma poção de estranha arremesável`
+                resultado.innerHTML = `<br> <img src="https://static1-br.millenium.gg/articles/1/10/77/1/@/128019-38-orig-1-article_m-1.jpg" alt=""> <br>Parabens! Você criou uma poção Estranha arremesável`
             }
 
         }
@@ -156,7 +155,7 @@
     }
 
     function voltar_pagina() {
-        window.location = "./pagina1.html"
+        window.location = "./curiosidadesMobs.html"
     }
 
     function pag_princip() {
