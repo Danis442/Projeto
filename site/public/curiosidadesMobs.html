@@ -16,19 +16,20 @@
         <br>
         <h1>Calculadora de EXP</h1>
 
-        <h4>No Minecraft você tem níveis de experiência. Quando você mata algum Mob você ganha níveis para poder encantar suas coisas, veja quantos Mobs você terá que matar para conseguir nível 30 de EXP.
+        <h4>No Minecraft você tem níveis de experiência. Quando você mata algum Mob você ganha níveis para poder
+            encantar suas coisas, veja quantos Mobs você terá que matar para conseguir nível 30 de EXP.
         </h4>
         <br>
 
 
-        Nível atual de XP (Entre 1 e 29)  <br>
+        Nível atual de XP (Entre 1 e 29) <br>
         <input type="number" min="1" max="29" id="input_nivel"><br> <br>
         <select name="select" id="select_xp">
             <option value="escolher">Escolha uma alternativa</option>
             <option value="zumbi">Zumbi</option>
             <option value="blaze">Blaze</option>
             <option value="dragon">Ender Dragon</option>
-          </select> <br><br>    
+        </select> <br><br>
 
         <button onclick="calcular()">Clique para descobrir</button> <br>
         <div id="resultado"></div>
@@ -48,18 +49,27 @@
 
 
 <script>
-    function calcular(){    
+    // FAZER UM (FOR) PARA TODOS OS MOSB QUE ELE IRA MATAR, DENTRO DESSE FOR COLOCAR UM MATH RANDOM PARA CADA MOB, O FOR IRA DAR UM RESULTADO FINAL DE XP, VER SE O FOR IRÁ BATER OS 30 NIVEIS DE XP E ENCERRAR POR AI.
+    function calcular() {
 
         var mobs = input_nivel.value
         var select = select_xp.value
-        
 
-        if (select == "escolher") {
-      alert("Escolha uma das alternativas...")
-    }
-        
-       else if(select == "zumbi"){
-            resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${(mobs * 33) / 0.3} zumbis para alcançar nível 30 de XP`
+        for (var contador = 0; contador < 30; contador += 1) {
+            if (select == "escolher") {
+                alert("Escolha uma das alternativas...")
+            }
+            else if (select == "zumbi") {
+                for(var contadorZumbi = 0; contadorZumbi < 30; contador += 1){
+                resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${(mobs * 33) / 0.3} zumbis para alcançar nível 30 de XP`
+            }
+            }
+            else if (select == "blaze") {
+                resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${(mobs * 21) / 0.4} Blazes para alcançar nível 30 de XP`
+            }
+            else {
+                resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar 1 Ender Dragon, pois quando esse chefe é derrotado, você ganha 72 níveis de XP ficando com ${((contador + 1) * 4)} níveis de XP`
+            }
         }
 
 
@@ -74,4 +84,4 @@
         window.location = "./pagina1.html"
     }
 
-</script>   
+</script>
