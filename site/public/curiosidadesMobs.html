@@ -52,29 +52,39 @@
     // FAZER UM (FOR) PARA TODOS OS MOSB QUE ELE IRA MATAR, DENTRO DESSE FOR COLOCAR UM MATH RANDOM PARA CADA MOB, O FOR IRA DAR UM RESULTADO FINAL DE XP, VER SE O FOR IRÁ BATER OS 30 NIVEIS DE XP E ENCERRAR POR AI.
     function calcular() {
 
-        var mobs = input_nivel.value
+        var mobs = Number(input_nivel.value)
         var select = select_xp.value
 
-        for (var contador = 0; contador < 30; contador += 1) {
-            if (select == "escolher") {
-                alert("Escolha uma das alternativas...")
-            }
-            else if (select == "zumbi") {
-                for(var contadorZumbi = 0; contadorZumbi < 30; contador += 1){
-                resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${(mobs * 33) / 0.3} zumbis para alcançar nível 30 de XP`
-            }
-            }
-            else if (select == "blaze") {
-                resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${(mobs * 21) / 0.4} Blazes para alcançar nível 30 de XP`
-            }
-            else {
-                resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar 1 Ender Dragon, pois quando esse chefe é derrotado, você ganha 72 níveis de XP ficando com ${((contador + 1) * 4)} níveis de XP`
+        if (select == "escolher") {
+            alert("Escolha uma das alternativas...")
+
+        } else {
+
+            for (var contador = 0; contador < 30; contador += 1) {
+
+                if (select == "zumbi") {
+                    var XP = (Math.random() * 1.5 + 0.5).toFixed(1)
+                    console.log(XP)
+                    for (var Zumbi = 0; Zumbi <= mobs; Zumbi++) {
+                        resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${parseInt(((43 * XP) / mobs))} zumbis para alcançar nível 30 de XP`
+                    }
+                }
+
+                else if (select == "blaze") {
+                    var XP = (Math.random() * 3 + 1).toFixed()
+                    console.log(XP)
+
+                    resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar ${parseInt(((21 * XP) / mobs))} Blazes para alcançar nível 30 de XP`
+                }
+                else {
+                    resultado.innerHTML = `<br>Com seu nível atual de XP que é ${mobs} você tera que matar 1 Ender Dragon, pois quando esse chefe é derrotado, você ganha 72 níveis de XP ficando com ${mobs + 72} níveis de XP`
+                }
             }
         }
 
-
-
     }
+
+
 
     function proxima_pagina() {
         window.location = "./paginaVetor.html"
