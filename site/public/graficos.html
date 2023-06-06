@@ -62,10 +62,26 @@
   <div class="grafico_baixo">
     <canvas id="myChart3"></canvas>
   </div>
+  <div id="checkbox"> 
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+  </div>
+ <button onclick="curtir()">Curtir</button>
 
-
+</body>
+</html>
 
     <script>
+       b_usuario.innerHTML = sessionStorage.NOME_USUARIO;  
+       
       const ctx = document.getElementById('myChart');
 
       new Chart(ctx, {
