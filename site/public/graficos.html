@@ -71,104 +71,106 @@
   </div>
 
 </body>
+
 </html>
 
-    <script>
-       b_usuario.innerHTML = sessionStorage.NOME_USUARIO;  
-       
-      const ctx = document.getElementById('myChart');
+<script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
-          datasets: [{
-            label: 'Anos',
-            backgroundColor: 'rgb(51, 145, 67)',
-            borderColor: 'rgb(51, 145, 67)',
-            borderWidth: 1
-          },
-          {
-            label: 'Players',
-            data: [300000, 100000, 500000, 1400000, 1200000, 800000, 500000, 350000, 1300550, 800000, 450000],
-            backgroundColor: 'rgb(51, 145, 67)',
-            borderColor: 'rgb(51, 145, 67)',
-            borderWidth: 1
-          }
-          ]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+      datasets: [{
+        label: 'Anos',
+        backgroundColor: 'rgb(51, 145, 67)',
+        borderColor: 'rgb(51, 145, 67)',
+        borderWidth: 1
+      },
+      {
+        label: 'Players',
+        data: [300000, 100000, 500000, 1400000, 1200000, 800000, 500000, 350000, 1300550, 800000, 450000],
+        backgroundColor: 'rgb(51, 145, 67)',
+        borderColor: 'rgb(51, 145, 67)',
+        borderWidth: 1
+      }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
         }
-      });
-    </script>
+      }
+    }
+  });
+</script>
 
-    <script>
-      const ctx2 = document.getElementById('myChart2');
+<script>
+  const ctx2 = document.getElementById('myChart2');
 
-      new Chart(ctx2, {
-        type: 'pie',
-        data: {
-          labels: ['CraftLandia', 'Hypiexel', 'MushMC', 'PixelmonCraft', 'Vanilla Tyme'],
-          datasets: [{
-            label: 'Players Ativos',
-            data: [400, 12000, 850, 1000, 1300],
-            backgroundColor: 'rgb(255. 99, 132)',
-            borderColor: 'rgb(255, 255, 255)',
-            borderWidth: 1
-          },
-          {
-            label: 'Servers Ativos',
-            data: [1, 1, 1, 5, 1],
-            backgroundColor: 'rgb(32, 98, 23)',
-            borderColor: 'rgb(255, 255, 255)',
-          }
-          ]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+  new Chart(ctx2, {
+    type: 'pie',
+    data: {
+      labels: ['CraftLandia', 'Hypiexel', 'MushMC', 'PixelmonCraft', 'Vanilla Tyme'],
+      datasets: [{
+        label: 'Players Ativos',
+        data: [400, 12000, 850, 1000, 1300],
+        backgroundColor: 'rgb(255. 99, 132)',
+        borderColor: 'rgb(255, 255, 255)',
+        borderWidth: 1
+      },
+      {
+        label: 'Servers Ativos',
+        data: [1, 1, 1, 5, 1],
+        backgroundColor: 'rgb(32, 98, 23)',
+        borderColor: 'rgb(255, 255, 255)',
+      }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
         }
-      });
+      }
+    }
+  });
 
-    </script>
+</script>
 
-    <script>
-      const ctx3 = document.getElementById('myChart3');
+<script>
+  const ctx3 = document.getElementById('myChart3');
 
-      new Chart(ctx3, {
-        type: 'bar',
-        data: {
-          labels: ['Fortnite', 'League of Leagends', 'Crossfire', 'Roblox', 'PUBG', 'Minecraft', 'Lost Ark', 'Counter-Strike: Global Offensive', 'Dota 2', 'Elden Ring',],
-          datasets: [{
-            label: 'Jogos mais jogados',
-            data: [12300000, 8000000, 8000000, 4000000, 3023000, 1400000, 1032000, 1030000, 1029000, 952000],
-            backgroundColor: 'rgb(51, 145, 67)',
-            borderColor: 'rgb(255, 255, 255)',
-            borderWidth: 1
-          },
-          {
-            label: 'TOP 10',
-            data: ['1º', '2º', '3º', '4º', '5º', '6º', '7º', '8º', '9º', '10º'],
-            backgroundColor: 'rgb(32, 98, 23)',
-            borderWidth: 1
-          }
-          ]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+  new Chart(ctx3, {
+    type: 'bar',
+    data: {
+      labels: ['Fortnite', 'League of Leagends', 'Crossfire', 'Roblox', 'PUBG', 'Minecraft', 'Lost Ark', 'Counter-Strike: Global Offensive', 'Dota 2', 'Elden Ring',],
+      datasets: [{
+        label: 'Jogos mais jogados',
+        data: [12300000, 8000000, 8000000, 4000000, 3023000, 1400000, 1032000, 1030000, 1029000, 952000],
+        backgroundColor: 'rgb(51, 145, 67)',
+        borderColor: 'rgb(255, 255, 255)',
+        borderWidth: 1
+      },
+      {
+        label: 'TOP 10',
+        data: ['1º', '2º', '3º', '4º', '5º', '6º', '7º', '8º', '9º', '10º'],
+        backgroundColor: 'rgb(32, 98, 23)',
+        borderWidth: 1
+      }
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
         }
-      });
+      }
+    }
+  });
 
-    </script>
+</script>
+

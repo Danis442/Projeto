@@ -5,9 +5,9 @@ function buscarUltimasMedidas(jogos, limite_linhas) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario;`;
+        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario group by nomeFavorito;`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario;`;
+        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario group by nomeFavorito;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -22,10 +22,10 @@ function buscarMedidasEmTempoReal(jogos) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario;`;
+        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario group by nomeFavorito; `;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario;`;
+        instrucaoSql = `select nomefavorito, count(nomefavorito) as votos from jogosFavoritos join usuario on fkUsuario = idUsuario group by nomeFavorito;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
