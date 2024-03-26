@@ -34,35 +34,35 @@ body {
     padding: 10px;
 }
 
-.container {
-    display: flex;
-    width: 80%;
-    margin: auto;
+    .container {
+        display: flex;
+        width: 80%;
+        margin: auto;
 
-}
+    }
 
-.header .container {
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    color: rgb(5, 53, 3);
-}
+    .header .container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        color: rgb(5, 53, 3);
+    }
 
-.menu {
-    width: 300px;
-    display: flex;
-    color: #000000;
-    list-style: none;
-    justify-content: space-evenly;
-    font-weight: bold;
+    .menu {
+        width: 300px;
+        display: flex;
+        color: #000000;
+        list-style: none;
+        justify-content: space-evenly;
+        font-weight: bold;
 
-}
+    }
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
 
 .banner {
     background-size: cover;
